@@ -17,7 +17,8 @@ jobs:
       - name: Usar SDK Android preinstalado
         run: |
           echo "ANDROID_HOME=$ANDROID_HOME"
-          sdkmanager --list_installed | head -50
+          ls -al "$ANDROID_HOME/cmdline-tools/"
+          echo "$ANDROID_HOME/cmdline-tools/16.0/bin" >> "$GITHUB_PATH"
       - run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - uses: gradle/actions/setup-gradle@v4
         with:
