@@ -1,4 +1,4 @@
-package com.orlytattoo.inventario;
+package com.inventariodeagujas.app;
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
  WebSettings settings=view.getSettings();settings.setJavaScriptEnabled(true);settings.setDomStorageEnabled(true);
  settings.setAllowFileAccess(false);settings.setAllowContentAccess(true);settings.setDefaultTextEncodingName("UTF-8");
  settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
- view.addJavascriptInterface(new Bridge(),"OrlyBridge");
+ view.addJavascriptInterface(new Bridge(),"InventoryBridge");
  view.setWebViewClient(new WebViewClient(){
   @Override public WebResourceResponse shouldInterceptRequest(WebView w,WebResourceRequest request){
    Uri u=request.getUrl();
@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
    backup=content;
    runOnUiThread(()->{
     Intent intent=new Intent(Intent.ACTION_CREATE_DOCUMENT);intent.addCategory(Intent.CATEGORY_OPENABLE);
-    intent.setType("application/json");intent.putExtra(Intent.EXTRA_TITLE,filename==null?"orly-backup.json":filename.replaceAll("[^A-Za-z0-9_.-]","_"));
+    intent.setType("application/json");intent.putExtra(Intent.EXTRA_TITLE,filename==null?"inventario-de-agujas-backup.json":filename.replaceAll("[^A-Za-z0-9_.-]","_"));
     startActivityForResult(intent,SAVE);
    });
   }

@@ -1,1 +1,2 @@
-<?xml version="1.0" encoding="utf-8"?><resources><style name="OrlyTheme" parent="android:style/Theme.Material.NoActionBar"><item name="android:statusBarColor">#1D2128</item><item name="android:navigationBarColor">#1D2128</item><item name="android:windowLightStatusBar">false</item></style></resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources><style name="InventoryTheme" parent="android:style/Theme.Material.NoActionBar"><item name="android:statusBarColor">#1D2128</item><item name="android:navigationBarColor">#1D2128</item><item name="android:windowLightStatusBar">false</item></style></resources>
